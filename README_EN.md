@@ -6,7 +6,7 @@
 
 <div align="center">
 
-👀[**데모**](#-데모-영상) **|** 🚩[**업데이트**](#-업데이트) **|** ⚡[**사용법**](#-빠른-추론) **|** 🏰[**모델 동물원**](docs/model_zoo.md) **|** 🔧[설치](#-의존성-및-설치)  **|** 💻[학습](docs/Training.md) **|** ❓[FAQ](docs/FAQ.md) **|** 🎨[기여](docs/CONTRIBUTING.md)
+👀[**Demos**](#-demos-videos) **|** 🚩[**Updates**](#-updates) **|** ⚡[**Usage**](#-quick-inference) **|** 🏰[**Model Zoo**](docs/model_zoo.md) **|** 🔧[Install](#-dependencies-and-installation)  **|** 💻[Train](docs/Training.md) **|** ❓[FAQ](docs/FAQ.md) **|** 🎨[Contribution](docs/CONTRIBUTING.md)
 
 [![download](https://img.shields.io/github/downloads/xinntao/Real-ESRGAN/total.svg)](https://github.com/xinntao/Real-ESRGAN/releases)
 [![PyPI](https://img.shields.io/pypi/v/realesrgan)](https://pypi.org/project/realesrgan/)
@@ -18,17 +18,43 @@
 
 </div>
 
-🔥 **AnimeVideo-v3 모델 (애니메이션 비디오 소형 모델)**. [[*애니메이션 비디오 모델*](docs/anime_video_model.md)] 및 [[*비교*](docs/anime_comparisons.md)]를 참조하세요<br>
-🔥 **RealESRGAN_x4plus_anime_6B** (애니메이션 이미지용 최적화). [[*애니메이션_모델*](docs/anime_model.md)]을 참조하세요
+🔥 **AnimeVideo-v3 model (动漫视频小模型)**. Please see [[*anime video models*](docs/anime_video_model.md)] and [[*comparisons*](docs/anime_comparisons.md)]<br>
+🔥 **RealESRGAN_x4plus_anime_6B** for anime images **(动漫插图模型)**. Please see [[*anime_model*](docs/anime_model.md)]
 
-<!-- 1. 우리 웹사이트에서 시도할 수 있습니다: [ARC Demo](https://arc.tencent.com/en/ai-demos/imgRestore) (현재 RealESRGAN_x4plus_anime_6B만 지원) -->
-1. :boom: **업데이트** 온라인 Replicate 데모: [![Replicate](https://img.shields.io/static/v1?label=Demo&message=Replicate&color=blue)](https://replicate.com/xinntao/realesrgan)
-1. Real-ESRGAN을 위한 온라인 Colab 데모: [![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/1k2Zod6kSHEvraybHl50Lys0LerhyTMCo?usp=sharing) **|** Real-ESRGAN (**애니메이션 비디오**)을 위한 온라인 Colab 데모: [![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/1yNl9ORUxxlL4N0keJa2SEPB61imPQd1B?usp=sharing)
-1. 휴대용 [Windows](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip) / [Linux](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-ubuntu.zip) / [MacOS](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-macos.zip) **실행 파일(Intel/AMD/Nvidia GPU용)**. 자세한 정보는 [여기](#휴대용-실행-파일-ncnn)를 참조하세요. ncnn 구현은 [Real-ESRGAN-ncnn-vulkan](https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan)에 있습니다
-<!-- 1. [텐센트 비디오](https://v.qq.com/s/topic/v_child/render/fC4iyCAM.html)에서 개선된 애니메이션을 볼 수 있습니다. -->
+<!-- 1. You can try in our website: [ARC Demo](https://arc.tencent.com/en/ai-demos/imgRestore) (now only support RealESRGAN_x4plus_anime_6B) -->
+1. :boom: **Update** online Replicate demo: [![Replicate](https://img.shields.io/static/v1?label=Demo&message=Replicate&color=blue)](https://replicate.com/xinntao/realesrgan)
+1. Online Colab demo for Real-ESRGAN: [![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/1k2Zod6kSHEvraybHl50Lys0LerhyTMCo?usp=sharing) **|** Online Colab demo for for Real-ESRGAN (**anime videos**): [![Colab](https://img.shields.io/static/v1?label=Demo&message=Colab&color=orange)](https://colab.research.google.com/drive/1yNl9ORUxxlL4N0keJa2SEPB61imPQd1B?usp=sharing)
+1. Portable [Windows](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip) / [Linux](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-ubuntu.zip) / [MacOS](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-macos.zip) **executable files for Intel/AMD/Nvidia GPU**. You can find more information [here](#portable-executable-files-ncnn). The ncnn implementation is in [Real-ESRGAN-ncnn-vulkan](https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan)
+<!-- 1. You can watch enhanced animations in [Tencent Video](https://v.qq.com/s/topic/v_child/render/fC4iyCAM.html). 欢迎观看[腾讯视频动漫修复](https://v.qq.com/s/topic/v_child/render/fC4iyCAM.html) -->
 
-Real-ESRGAN은 **실용적인 이미지/비디오 복원 알고리즘**을 개발하는 것을 목표로 합니다。
+Real-ESRGAN aims at developing **Practical Algorithms for General Image/Video Restoration**.<br>
+We extend the powerful ESRGAN to a practical restoration application (namely, Real-ESRGAN), which is trained with pure synthetic data.
 
+🌌 Thanks for your valuable feedbacks/suggestions. All the feedbacks are updated in [feedback.md](docs/feedback.md).
+
+---
+
+If Real-ESRGAN is helpful, please help to ⭐ this repo or recommend it to your friends 😊 <br>
+Other recommended projects:<br>
+▶️ [GFPGAN](https://github.com/TencentARC/GFPGAN): A practical algorithm for real-world face restoration <br>
+▶️ [BasicSR](https://github.com/xinntao/BasicSR): An open-source image and video restoration toolbox<br>
+▶️ [facexlib](https://github.com/xinntao/facexlib): A collection that provides useful face-relation functions.<br>
+▶️ [HandyView](https://github.com/xinntao/HandyView): A PyQt5-based image viewer that is handy for view and comparison <br>
+▶️ [HandyFigure](https://github.com/xinntao/HandyFigure): Open source of paper figures <br>
+
+---
+
+### 📖 Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data
+
+> [[Paper](https://arxiv.org/abs/2107.10833)] &emsp; [[YouTube Video](https://www.youtube.com/watch?v=fxHWoDSSvSc)] &emsp; [[B站讲解](https://www.bilibili.com/video/BV1H34y1m7sS/)] &emsp; [[Poster](https://xinntao.github.io/projects/RealESRGAN_src/RealESRGAN_poster.pdf)] &emsp; [[PPT slides](https://docs.google.com/presentation/d/1QtW6Iy8rm8rGLsJ0Ldti6kP-7Qyzy6XL/edit?usp=sharing&ouid=109799856763657548160&rtpof=true&sd=true)]<br>
+> [Xintao Wang](https://xinntao.github.io/), Liangbin Xie, [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ), [Ying Shan](https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en) <br>
+> [Tencent ARC Lab](https://arc.tencent.com/en/ai-demos/imgRestore); Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
+
+<p align="center">
+  <img src="assets/teaser.jpg">
+</p>
+
+---
 
 <!---------------------------------- Updates --------------------------->
 ## 🚩 Updates
